@@ -99,11 +99,11 @@ const Contact = () => {
                     <br></br>
                     <Text variant="h6">
                         You can connect with me on Instagram
-                        <Link href="https://www.instagram.com/codeforinterview/" color="inherit" target="_blank" style={{ marginLeft: 5 }}>
+                        <Link href="https://www.instagram.com/harshitgupta6735/" color="inherit" target="_blank" style={{ marginLeft: 5 }}>
                             <Instagram />
                         </Link>
                         or send me an Email
-                        <Link href="mailto:codeforinterview@gmail.com?Subject=This is a subject" target="_blank" color="inherit" style={{ marginLeft: 5 }}>
+                        <Link href="mailto:guptaharshit0056@gmail.com" target="_blank" color="inherit" style={{ marginLeft: 5 }}>
                             <Email />
                         </Link>.
                     </Text>
@@ -114,11 +114,11 @@ const Contact = () => {
                     <br></br>
                     <Text variant="h6">
                         You can connect with me on Instagram
-                        <Link href="https://www.instagram.com/codeforinterview/" color="inherit" target="_blank" style={{ marginLeft: 5 }}>
+                        <Link href="https://www.instagram.com/harshitgupta6735/" color="inherit" target="_blank" style={{ marginLeft: 5 }}>
                             <Instagram />
                         </Link>
                         or send me an Email
-                        <Link href="mailto:codeforinterview@gmail.com?Subject=This is a subject" target="_blank" color="inherit" style={{ marginLeft: 5 }}>
+                        <Link href="mailto:guptaharshit0056@gmail.com" target="_blank" color="inherit" style={{ marginLeft: 5 }}>
                             <Email />
                         </Link>.
                         <br /><br />

@@ -71,19 +71,19 @@ const About = () => {
                 </Text>
                 <Text variant="h5">
                     You can connect with me on LinkedIn:
-                    <Link href="https://www.linkedin.com/in/harshit0056" target="_blank">
+                    <Link href="https://www.linkedin.com/in/harshit-gupta-726693224/" target="_blank">
                         <LinkedIn fontSize="large" style={{ verticalAlign: 'middle', marginLeft: 5 }} />
                     </Link>
                 </Text>
                 <Text variant="h5">
                     Or follow me on Instagram:
-                    <Link href="https://www.instagram.com/harshit0056" target="_blank">
+                    <Link href="https://www.instagram.com/harshitgupta6735/" target="_blank">
                         <Instagram fontSize="large" style={{ verticalAlign: 'middle', marginLeft: 5 }} />
                     </Link>
                 </Text>
                 <Text variant="h5">
                     Feel free to reach out via email:
-                    <Link href="mailto:harshit@example.com">
+                    <Link href="mailto:guptaharshit0056@gmail.com">
                         <Email fontSize="large" style={{ verticalAlign: 'middle', marginLeft: 5 }} />
                     </Link>
                 </Text>
@@ -91,13 +91,13 @@ const About = () => {
                     <Link href="https://github.com/harshit0056" target="_blank">
                         <GitHub fontSize="large" />
                     </Link>
-                    <Link href="https://www.linkedin.com/in/harshit0056" target="_blank">
+                    <Link href="https://www.linkedin.com/in/harshit-gupta-726693224/" target="_blank">
                         <LinkedIn fontSize="large" />
                     </Link>
-                    <Link href="https://www.instagram.com/harshit0056" target="_blank">
+                    <Link href="https://www.instagram.com/harshitgupta6735/" target="_blank">
                         <Instagram fontSize="large" />
                     </Link>
-                    <Link href="mailto:harshit@example.com">
+                    <Link href="mailto:guptaharshit0056@gmail.com">
                         <Email fontSize="large" />
                     </Link>
                 </IconWrapper>
