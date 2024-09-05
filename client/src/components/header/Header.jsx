@@ -4,7 +4,7 @@ import { AppBar, Toolbar, styled, Button, Popover, Box, Avatar } from '@mui/mate
 import { Link } from 'react-router-dom';
 import Categories from '../home/Categories'; // Import the Categories component
 import { DataContext } from "../../context/DataProvider";
-
+import {PersonalDataContext} from '../../context/PersonalDataProvider';
 const Component = styled(AppBar)`
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTObuEpyAHN2mmT8BWXeCoMIz_F1kyOdrCJjA&s);
     background-repeat: no-repeat;
@@ -31,18 +31,20 @@ const Container = styled(Toolbar)`
 
 const LinksContainer = styled(Box)`
     display: flex;
+
     & > a {
         padding: 20px;
         color: #000;
         text-decoration: none;
     }
+        
 `;
 
 const AccountContainer = styled(Box)`
     display: flex;
     align-items: center;
     & > *:not(:last-child) {
-        margin-right: 8px;
+        margin: 8px;
     }
 `;
 
@@ -51,6 +53,7 @@ const StyledAvatar = styled(Avatar)`
 `;
 
 const Header = () => {
+    const {personalpost,setPersonalpost }=useContext(PersonalDataContext);
     const navigate = useNavigate();
     const [anchorEl, setAnchorEl] = useState(null); // Anchor element for Popover
     const { account } = useContext(DataContext);
@@ -66,7 +69,10 @@ const Header = () => {
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
 
-    const logout = async () => navigate('/account');
+    const logout = async () => {
+        setPersonalpost(false);
+        navigate('/account');
+    }
 
     // Get the initials from the username
     const getInitials = (name) => {
@@ -74,6 +80,10 @@ const Header = () => {
                    .map(part => part.charAt(0).toUpperCase())
                    .join('');
     };
+
+    const handlprsnlpost=()=>{
+        setPersonalpost(!personalpost);
+    }
 
     return (
         <Component>
@@ -83,7 +93,7 @@ const Header = () => {
                     id={id}
                     open={open}
                     anchorEl={anchorEl}
-                    onClose={handleClose}
+                    onClick={handleClose}
                     anchorOrigin={{
                         vertical: 'bottom',
                         horizontal: 'center',
@@ -104,10 +114,11 @@ const Header = () => {
                     <Link to='/contact'>CONTACT</Link>
                     <Link to='/account' onClick={logout}>LOGOUT</Link>
                 </LinksContainer>
-
+                <Button onClick={handlprsnlpost}>
                 <AccountContainer>
                     <StyledAvatar>{getInitials(account.username)}</StyledAvatar>
                 </AccountContainer>
+                </Button>
             </Container>
         </Component>
     );

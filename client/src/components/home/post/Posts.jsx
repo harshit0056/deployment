@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 
 import { Grid, Box } from '@mui/material';
 import { Link, useSearchParams } from 'react-router-dom';
-
+import { useContext } from 'react';
+import { DataContext } from '../../../context/DataProvider';
 // import { getAllPosts } from '../../../service/api';
 import { API } from '../../../service/api';
 
@@ -11,7 +12,7 @@ import Post from './Post';
 
 const Posts = () => {
     const [posts, getPosts] = useState([]);
-    
+    const {account}=useContext(DataContext)
     const [searchParams] = useSearchParams();
     const category = searchParams.get('category');
 
