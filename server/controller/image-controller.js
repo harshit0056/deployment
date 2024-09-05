@@ -1,7 +1,7 @@
 import grid from 'gridfs-stream';
 import mongoose from 'mongoose';
 
-const url = 'https://deployment-kzi1.onrender.com';
+const url = 'https://backend-blogit.vercel.app/';
 
 
 let gfs, gridfsBucket;
